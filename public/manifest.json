@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Momento",
+  "name": "Momento — Turn Memories Into Magic",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#f48eb0",              
+  "background_color": "#fff0f6",         
+  "description": "Momento is a heartfelt space to celebrate love, seek forgiveness, and cherish romantic moments through personalized experiences.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
 }
