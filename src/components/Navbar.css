@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@600&display=swap');
+.slogan {
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffe6f9;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255, 182, 230, 0.3);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+  }
+  
+  .navbar-title:hover .slogan {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+  }
+  
+.navbar {
+  background: linear-gradient(135deg, rgba(255, 144, 213, 0.6), rgba(189, 124, 255, 0.6));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 182, 230, 0.4);
+  padding: 0.6rem 1.5rem;
+  margin: 1rem auto;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 1rem;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+  animation: float 1s ease-in-out infinite;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.navbar:hover {
+  box-shadow: 0 0 20px #f093fb, 0 0 40px #f5576c, 0 0 60px #b266ff;
+  transform: scale(1.01);
+}
+
+.navbar-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #fff0f6;
+  text-shadow:
+    0 0 8px #fbb1ff,
+    0 0 16px #ec38bc,
+    0 0 24px #7303c0;
+  position: relative;
+  user-select: none;
+  letter-spacing: 3px;
+  cursor: default;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar-title:hover {
+  color: #ffe6f9;
+  text-shadow:
+    0 0 12px #ff6ec4,
+    0 0 24px #7873f5,
+    0 0 36px #ff69b4;
+}
+
+/* Animated, multi-colored heartbeat hearts */
+.navbar-title::before,
+.navbar-title::after {
+  content: '🤍';
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: heartbeat 3s infinite;
+}
+
+.navbar-title::before {
+  left: -2.5rem;
+  animation-delay: 0s;
+  color: #ff69b4; /* Pink */
+}
+
+.navbar-title::after {
+  right: -2.5rem;
+  animation-delay: 1.2s;
+  color: #b266ff; /* Purple */
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  14% {
+    transform: translateY(-50%) scale(1.25);
+  }
+  28% {
+    transform: translateY(-50%) scale(1);
+  }
+  42% {
+    transform: translateY(-50%) scale(1.2);
+  }
+  70% {
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+  
+}
