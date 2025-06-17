@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
       <header className="App-header">
         <Navbar />
         <HomePage />
-        <Footer />
       </header>
     </div>
   );
