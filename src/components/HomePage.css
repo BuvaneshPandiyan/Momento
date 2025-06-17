@@ -1,163 +1,145 @@
-/* Import cleaner, modern fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap');
+/* Import romantic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
 
-/* Universal box-sizing */
-*,
-*::before,
-*::after {
+/* Universal Reset */
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-/* Reset and full viewport background with stronger pink-purple gradient */
-html, body {
   margin: 0;
   padding: 0;
+}
+
+html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  max-width: 100vw;
-  background: linear-gradient(135deg, #ff66cc, #a64ca6, #7a3fa4);
+  background: linear-gradient(135deg, #ffe6f0, #ffd9ec);
   font-family: 'Poppins', sans-serif;
-  color: #fef6fb;
+  color: #4a2e4f;
+  scroll-behavior: smooth;
 }
 
-/* React root div full height */
 #root {
   height: 100%;
 }
 
-/* Content container */
+/* Base Container */
 .content-container {
-  height: 100%;
-  max-width: 900px;
-  margin: 2rem auto 1rem;
-  background: rgba(255, 182, 230, 0.1);
-  border-radius: 30px;
-  padding: 3rem 3.5rem;
-  box-shadow:
-    0 0 15px rgba(255, 182, 230, 0.15),
-    inset 0 0 10px rgba(255, 255, 255, 0.06);
-  overflow-y: auto;
-  color: #fff0fb;
-  font-weight: 500;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #4a2e4f;
   font-size: 1.15rem;
-  line-height: 1.7;
-  font-family: 'Poppins', sans-serif;
-  text-shadow: 0 0 5px rgba(255, 182, 230, 0.35);
+  line-height: 1.8;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease-in-out;
 }
 
-/* Headings inside content */
-.content-container h1,
-.content-container h2,
-.content-container h3 {
-  font-family: 'Montserrat', sans-serif;
+.content-container:hover {
+  transform: translateY(-10px);
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
   font-weight: 700;
+  color: #d86ba8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(248, 207, 255, 0.4);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.intro {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6a3d5a;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.bold-paragraph {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #b85f98;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #ff8de1;
-  text-shadow:
-    0 0 10px #ff66cc,
-    0 0 20px #a64ca6;
+  line-height: 1.7;
 }
 
-/* Paragraph styling */
-.content-container p {
-  margin-bottom: 1.3rem;
+.section {
+  margin: 4rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+  transition: all 0.4s ease-in-out;
 }
 
-/* Highlight important points */
-.content-container strong {
-  color: #ff9cce;
-  text-shadow: 0 0 5px #ff6eb4;
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Emoji style for hearts and icons */
-.content-container span {
-  font-size: 1.4rem;
-  vertical-align: middle;
-}
-
-/* Links */
-.content-container a {
-  color: #ea8bf7;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
-
-.content-container a:hover {
-  color: #ff6eb4;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.whatsapp-icon {
-  width: 48px;
-  height: 48px;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-icon:hover {
-  transform: scale(1.1);
-}
-
-/* Section image container */
-.section-image {
-  position: relative;
+.image-placeholder {
   width: 100%;
-  height: 500px;
-  background-color: #f5f5f5;
+  height: 300px;
+  background-color: #fbe4ec;
   border-radius: 20px;
-  margin: 3rem 0;
+  margin: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.03);
+}
+
+.section-image {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(145deg, #fff0f6, #ffe3e3);
+  border-radius: 20px;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a3d5a;
   font-size: 1.3rem;
-  color: #fff;
   font-style: italic;
   text-align: center;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.5s ease;
-  animation: floatIn 1s ease forwards;
+  transition: transform 0.4s ease-in-out;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.section-image:hover {
+  transform: perspective(800px) rotate(0.5deg) scale(1.05);
 }
 
 .section-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  background: rgba(255, 255, 255, 0.3);
   z-index: 1;
-  transition: opacity 0.5s ease;
-}
-
-.section-image::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
-  animation: pulse 6s infinite ease-in-out;
-  z-index: 0;
 }
 
 .section-image span {
+  position: relative;
   z-index: 2;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.3s ease;
   opacity: 0.9;
-}
-
-.section-image:hover {
-  transform: scale(1.03);
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.1) saturate(1.2);
 }
 
 .section-image:hover span {
@@ -165,11 +147,47 @@ html, body {
   opacity: 1;
 }
 
-/* Entrance animation */
-@keyframes floatIn {
+button, .btn {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #4a2e4f;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.3);
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+.whatsapp-float {
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -177,32 +195,27 @@ html, body {
   }
 }
 
-/* Ripple glow animation */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.2;
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
   }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.35;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.2;
-  }
-}
 
-/* Responsive for smaller screens */
-@media (max-width: 600px) {
+  .intro {
+    font-size: 1rem;
+  }
+
+  .section-image {
+    height: 300px;
+  }
+
   .content-container {
     padding: 2rem 1rem;
-    margin: 1rem 0.5rem;
+    margin: 1rem;
     font-size: 1rem;
   }
 
   .whatsapp-float {
-    right: 10px;
-    bottom: 10px;
+    bottom: 12px;
+    right: 12px;
   }
 }
