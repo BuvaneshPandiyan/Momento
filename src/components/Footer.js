@@ -1,12 +1,18 @@
 import React from 'react';
 import './Footer.css';
+import WhatsAppIcon from '../components/assets/icon-whatsapp.png';
+import InstagramIcon from '../components/assets/icon-instagram.png';
+import EmailIcon from '../components/assets/icon-email.png';
 
 const Footer = () => {
   return (
     <footer className="footer">
+      {/* Top Divider */}
+      <div className="softDivider" />
+
+      {/* Contact Icons */}
       <p className="textHighlight">Find us on</p>
       <div className="iconContainer">
-        {/* WhatsApp */}
         <a
           href="https://wa.me/919876543210"
           target="_blank"
@@ -14,18 +20,8 @@ const Footer = () => {
           aria-label="WhatsApp"
           className="iconLink"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="#25D366"
-            viewBox="0 0 24 24"
-          >
-            <path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12a11.86 11.86 0 001.68 6L0 24l6-1.68a11.93 11.93 0 006 1.68c6.63 0 12-5.37 12-12 0-3.22-1.26-6.25-3.48-8.52zm-8.52 16.52a9.33 9.33 0 01-5-1.5l-.36-.21-3.1.82.83-3.02-.23-.36a9.3 9.3 0 1110.43 4.27zm5.7-7.12c-.3-.15-1.77-.87-2.04-.96s-.47-.14-.67.15-.77.96-.95 1.16-.35.22-.65.07a7.46 7.46 0 01-2.19-1.35 8.3 8.3 0 01-1.53-1.9c-.16-.28 0-.43.13-.58.13-.13.3-.35.45-.53.15-.17.2-.28.3-.46s.05-.33-.02-.48-.66-1.6-.9-2.2c-.24-.57-.5-.5-.67-.5h-.57a1.4 1.4 0 00-1 .48 4.27 4.27 0 00-1.4 3.31c0 1.54 1.75 3 2 3.21s3.46 5.23 8.4 6.03a7.17 7.17 0 003.32 0 8.14 8.14 0 002.65-1.52 7.6 7.6 0 002.24-3.3c.19-.5.17-.92.12-1s-.18-.15-.4-.27z" />
-          </svg>
+          <img src={WhatsAppIcon} alt="WhatsApp" className="iconImage" />
         </a>
-
-        {/* Instagram */}
         <a
           href="https://instagram.com/yourprofile"
           target="_blank"
@@ -33,35 +29,115 @@ const Footer = () => {
           aria-label="Instagram"
           className="iconLink"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="#E4405F"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.055 1.96.24 2.414.414a4.9 4.9 0 011.675 1.1 4.9 4.9 0 011.1 1.676c.174.454.36 1.243.415 2.414.06 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.96-.414 2.414a4.903 4.903 0 01-1.1 1.675 4.9 4.9 0 01-1.675 1.1c-.454.174-1.243.36-2.414.415-1.266.06-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.96-.24-2.414-.414a4.9 4.9 0 01-1.675-1.1 4.9 4.9 0 01-1.1-1.675c-.174-.454-.36-1.243-.415-2.414C2.172 15.584 2.16 15.2 2.16 12s.012-3.584.07-4.85c.055-1.17.24-1.96.414-2.414a4.903 4.903 0 011.1-1.675 4.9 4.9 0 011.675-1.1c.454-.174 1.243-.36 2.414-.415 1.266-.06 1.65-.07 4.85-.07M12 0c-3.257 0-3.667.012-4.947.07-1.276.058-2.15.25-2.907.537a6.81 6.81 0 00-2.45 1.593A6.815 6.815 0 00.587 4.647c-.287.756-.479 1.63-.537 2.907C.012 8.333 0 8.743 0 12c0 3.257.012 3.667.07 4.947.058 1.276.25 2.15.537 2.907a6.81 6.81 0 001.593 2.45 6.813 6.813 0 002.45 1.593c.756.287 1.63.479 2.907.537 1.28.058 1.69.07 4.947.07s3.667-.012 4.947-.07c1.276-.058 2.15-.25 2.907-.537a6.81 6.81 0 002.45-1.593 6.81 6.81 0 001.593-2.45c.287-.756.479-1.63.537-2.907.058-1.28.07-1.69.07-4.947s-.012-3.667-.07-4.947c-.058-1.276-.25-2.15-.537-2.907a6.81 6.81 0 00-1.593-2.45 6.81 6.81 0 00-2.45-1.593c-.756-.287-1.63-.479-2.907-.537C15.667.012 15.257 0 12 0z" />
-            <path d="M12 5.838a6.162 6.162 0 106.162 6.162A6.162 6.162 0 0012 5.838zm0 10.162a3.998 3.998 0 113.998-3.998A3.998 3.998 0 0112 16z" />
-            <circle cx="18.406" cy="5.594" r="1.44" />
-          </svg>
+          <img src={InstagramIcon} alt="Instagram" className="iconImage" />
         </a>
-
-        {/* Email */}
         <a
           href="mailto:contact@youremail.com"
           aria-label="Email"
           className="iconLink"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="#EA4335"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 13.065l-11.605-7.815v13.75h23.21v-13.75zm0-2.13l11.605-7.815h-23.21z" />
-          </svg>
+          <img src={EmailIcon} alt="Email" className="iconImage" />
         </a>
+      </div>
+      <h2 className="sectionTitle">Our Works</h2>
+
+<div className="worksGrid">
+  <div className="workItem" data-title="Proposal">
+    <iframe
+      src="https://projectlove1.vercel.app" // TODO: Change to actual Proposal URL
+      title="Proposal Preview"
+      className="iframePreview"
+      loading="lazy"
+      allowFullScreen
+      scrolling="no"
+    ></iframe>
+    <a
+      href="https://projectlove1.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="overlayLink"
+      aria-label="Open Proposal Website"
+    ></a>
+  </div>
+
+  <div className="workItem" data-title="Invitation">
+    <iframe
+      src="https://projectlove1.vercel.app" // TODO: Change to actual Invitation URL
+      title="Invitation Preview"
+      className="iframePreview"
+      loading="lazy"
+      allowFullScreen
+      scrolling="no"
+    ></iframe>
+    <a
+      href="https://projectlove1.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="overlayLink"
+      aria-label="Open Invitation Website"
+    ></a>
+  </div>
+
+  <div className="workItem" data-title="Apology">
+    <iframe
+      src="https://projectlove1.vercel.app" // TODO: Change to actual Apology URL
+      title="Apology Preview"
+      className="iframePreview"
+      loading="lazy"
+      allowFullScreen
+      scrolling="no"
+    ></iframe>
+    <a
+      href="https://projectlove1.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="overlayLink"
+      aria-label="Open Apology Website"
+    ></a>
+  </div>
+
+  <div className="workItem" data-title="Love Story">
+    <iframe
+      src="https://projectlove1.vercel.app" // TODO: Change to actual Love Story URL
+      title="Love Story Preview"
+      className="iframePreview"
+      loading="lazy"
+      allowFullScreen
+      scrolling="no"
+    ></iframe>
+    <a
+      href="https://projectlove1.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="overlayLink"
+      aria-label="Open Love Story Website"
+    ></a>
+  </div>
+</div>
+
+
+      {/* About Us */}
+      <h2 className="sectionTitle">About Us</h2>
+      <p className="aboutSection">
+        We create personalized digital moments that help you express love, say sorry, invite someone special, or celebrate love stories. Every project is crafted to touch hearts and create unforgettable emotional connections.
+      </p>
+
+      {/* Newsletter */}
+      <div className="newsletter">
+        <input type="email" placeholder="Your email" className="newsletterInput" />
+        <button className="newsletterButton">Subscribe</button>
+      </div>
+
+      {/* Call to Action */}
+      <div className="footerCTA">
+        <em>"Love deserves more than words. Create your own unforgettable digital moment."</em>
+      </div>
+
+      {/* Floating Hearts */}
+      <div className="floatingHearts">
+        <span className="heart" />
+        <span className="heart delay1" />
+        <span className="heart delay2" />
       </div>
     </footer>
   );
